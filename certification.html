@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ecolo Rentel International  - Société de lavage, teinture et Traitements Spéciaux a Tanger</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="description" content="Est une entreprise maroco-espagnole specialisee dans le delavage, la teinture et les traitements speciaux sur tout article textile confectionné. Société de lavage, teinture et Traitements Spéciaux a Tanger">
+        <meta name="keywords" content="delavage,teinture,textile">
+        <meta name="author" content="Ecolo-Rentel-International">
+        <link rel="stylesheet" href="./css/normalize.css" />
+
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/query.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/all.min.css" />
+        
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><img src="./images/logo2.png" alt="logo"></label>
+                <ul>
+                    <li><a href="/index.html" class="active js-scroll-trigger">Accueil</a></li>
+                    <li><a href="/about.html" class="js-scroll-trigger">À propos</a></li>
+                    <li><a href="/contact.html" class="js-scroll-trigger">Nous contacter</a></li>
+                    <li><a href="/certification.html" class="js-scroll-trigger">Certification</a></li>
+                </ul>
+        </nav>
+        <section id="notSupports1" class="container certification">
+            <div class="certif-div">
+            <h2>CERTIFICATION</h2>
+            <p>Dans le souci de satisfaire nos clients par le respect des standards internationaux de qualité, d'éthique sociale et de sécurité de travail, nous en avons fait notre pierre angulaire, ainsi nous avons reçu des notes d'excelence lors des différents audits de certification de nos principaux clients :</p>
+            <ul>
+                <li> - INDITEX
+                    (CLEAR TO WEAR & READY TO MANUFACTURE)
+                </li>
+                <li> - MANGO</li>
+                <li> - H&M</li>
+                <li> - TESCO</li>
+                <li> - EL CORTE INGLES</li>
+                <li> - MARKS & SPENCER</li>
+            </ul>
+        </div>
+            <div class="img-div">
+            <img src="./images/certife.png" alt="certification">
+            </div>
+        </section>
+        
+    <footer>
+        <div class="side1">
+            <img src="./images/logo2.png" alt="logo">
+            <div class="left footer-side">
+                <ul>
+                    <li class="first">LIENS</li>
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/about.html">À propos</a></li>
+                    <li><a href="/contact.html">Nous contacter</a></li>
+                    <li><a href="/certification.html">Certification</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="side2">
+            <div class="right footer-side">
+                <ul>
+                    <li class="first">INFO</li>
+                    <li>Phone : +212 539 351 505</li>
+                    <li>Phone : +212 539 351 503</li>
+                    <li>Phone : +212 539 351 483</li>
+                    <li>Email : contact@ecolo.ma</li>
+                    <li>address : Zone Industrielle Mghogha,<br> route de Tétouan, Lot 58, Allée n°2
+                        90000, Tanger, Maroc</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+                <p> &copy;2021, All Rights Reserved,  Created By &hearts; ET-TANTI MUSTAPHA</p>
+        </div>
+        <br />
+    </footer>
+        <script>
+            $('.js-scroll-trigger').click(function () {
+                $('.navbar-collapse').collapse('hide');
+            });
+
+            function animateValue(id, start, end, duration) {
+                if (start === end) return;
+                var range = end - start;
+                var current = start;
+                var increment = end > start? 1 : -1;
+                var stepTime = Math.abs(Math.floor(duration / range));
+                var obj = document.getElementById(id);
+                var timer = setInterval(function() {
+                    current += increment;
+                    obj.innerHTML = current;
+                    if (current == end) {
+                        clearInterval(timer);
+                    }
+                }, stepTime);
+            }
+
+           //document.onload(animateValue("value", 10000000, 50000000, 5000));
+        </script>
+        
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+            showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+            }
+
+            //slide automatic
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+            }
+
+
+
+            // read more button
+            function myFunction() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("myBtn");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Voire plus"; 
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Voire mois"; 
+                    moreText.style.display = "inline";
+                }
+                }
+            </script>
+    </body>
+</html>
