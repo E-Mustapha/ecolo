@@ -16,10 +16,10 @@ button {
 body{
     margin: 0;
     font-family: "Dosis", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 hr{
     height: 3px;
