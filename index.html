@@ -14,211 +14,301 @@
         <link rel="stylesheet" href="./css/query.css">
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="./css/all.min.css" />
-        
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+        <style>
+            
+            .swiper {
+                width: 100%;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .swiper-slide {
+                background-position: center;
+                background-size: cover;
+                width: 520px;
+                height: 380px;
+                opacity: 1;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+            }
+
+            .swiper-slide img {
+                display: block;
+                width: 640px;
+                height: 320px;
+                opacity: 1;
+            }
+            .s1{
+                position: relative;
+            }
+            .s1:hover .s1-1{
+                visibility: visible;
+                opacity: 0.9;
+                position: absolute;
+                bottom: 0;
+
+            }
+            .s1-1{
+                opacity: 0;transition: 0.3s;
+            position: absolute;
+            bottom: 0%;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+                visibility: hidden;
+            }
+            .bb1{
+                position: absolute;
+                bottom: 32px;
+                left: 50%;
+            }
+        </style>
     </head>
     <body onload="animateValue('value', 10, 50, 3000)">
-        <nav>
-            <input type="checkbox" id="check"/>
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo"><img src="./images/logo2.png" alt="logo"></label>
+        <header>
+            <nav>
+                <input type="checkbox" id="check"/>
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <label class="logo"><img src="./images/logo2.png" alt="logo"></label>
                 <ul>
                     <li><a href="/index.html" class="active js-scroll-trigger">Accueil</a></li>
                     <li><a href="/about.html" class="js-scroll-trigger">À propos</a></li>
                     <li><a href="/contact.html" class="js-scroll-trigger">Nous contacter</a></li>
                     <li><a href="/certification.html" class="js-scroll-trigger">Certification</a></li>
                 </ul>
-        </nav>
-        <section id="notSupports" class="container">
-            <div class="side-div">
-                <h2>ECOL<span class="char">O</span>RENTEL</h2>
-                <h4>Ecolo Rentel International</h4>
-                <p>entreprise maroco-espagnole specialisee dans le delavage, la teinture et les traitements speciaux sur tout article textile confectionné.</p>
+            </nav>
+        </header>
+        <section class="banner-container" style="max-width: 100%;">
+            <div id="notSupports" class="container">
+                <div class="banner">
+                    <div class="side-div">
+                        <h2>ECOL<span class="char">O</span>RENTEL</h2>
+                        <p>entreprise maroco-espagnole specialisee dans le delavage, la teinture et les traitements speciaux sur tout article textile confectionné.</p>
 
-                
-                <div class="chiffre">
-                    <h4>CHIFFRE D'AFFAIRE :<br> De <span id="number">10</span>MILLION - DH à <span id="value">10</span>MILLION - DH</h4>
-                </div>
-                <a href="/about.html" class="btn btn-profile">Profil De La Société</a>
+                        
+                        <div class="chiffre">
+                            <h4>CHIFFRE D'AFFAIRE :<br> De <span id="number">10</span>MILLION - DH à <span id="value">10</span>MILLION - DH</h4>
+                        </div>
+                        <a href="/about.html" class="btn btn-profile">Profil De La Société</a>
 
+                        </div>
+                    <div class="svg-div">
+                        <div class="rltv">
+                            <img src="./images/machine2.png" class="svg-woman" alt="svg">
+                            <img src="./images/after-machine.png" class="after-machine" alt="svg">
+                        </div>
+                    </div>
                 </div>
-            <div class="svg-div">
-                <img src="./images/man-walking.svg" class="svg-woman" alt="svg">
             </div>
         </section>
-        <hr>
-        <div>
-        <h2 class="titles">PRÉSNTATION</h2>
-
-        <div id="notSupports2" class="images-container">
-            <div class="slider-container">
-                <img class="mySlides" src="./images/slide-images/11.jpg" style="width:100%" alt="slider-images">
-                <img class="mySlides" src="./images/slide-images/15.jpg" style="width:100%" alt="slider-images">
-                <img class="mySlides" src="./images/slide-images/3.jpg" style="width:100%" alt="slider-images">
-                <img class="mySlides" src="./images/slide-images/17.jpg" style="width:100%" alt="slider-images">
-                <img class="mySlides" src="./images/slide-images/43.jpg" style="width:100%" alt="slider-images">
-              
-                <button class="slide-button display-left" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="slide-button display-right" onclick="plusDivs(1)">&#10095;</button>
-              </div>
-
-              <div class="right-div">
-                  <h4>AVANTAGES</h4>
-                <p>Nous sommes les premiers au Maroc a introduire le lavage écologique par l'utilisation de machine 100% Waterless fontionnant a l'Ozone, n'utilisant aucune goutte d'eau, ni de produits chimiques. Nous nous sommes aussi dotés de machines Laser de dernière génération,<span id="dots">...</span> <span id="more"> capables de produire n'importe quel motif ou image sur tout type de tissus (dénim, prêt a porter, maille ...etc), avec une finesse et une qualité inégalable.<br> <br>
-                Notre marché actuel couvre tout le territoire national, l'Europe et les Etas-Unis. La qualité de service que nous assurons nous distingue nettement de la concurence et a fait valoir la reconnaissance de nos clients à travers des notes d'excelence de leurs cabinets d'audit de qualité, de technicité et d'éthique sociale. Nous sommes fiers de compter parmi nos clients</span> <button onclick="myFunction()" id="myBtn">Voire plus</button></p>
-                <a href="/about.html" class="btn btn-profile">Profil de la société</a>
-            </div>
-              
-        </div>
-    </div>
-        <hr>
-        <div>
-        <h2 class="titles">GALLERIE</h2>
         
-        <div class="row">
-                <div class="column">
-                  <img src="./images/slide-images/9.jpg" style="width:100%" alt="image-galleri">
-                  <img src="./images/slide-images/15.jpg" style="width:100%" alt="image-galleri">
-                  <img src="./images/slide-images/11.jpg" style="width:100%" alt="image-galleri">
-                </div>
-                <div class="column">
-                  <img src="./images/slide-images/22.jpg" style="width:100%" alt="image-galleri">
-                  <img src="./images/slide-images/25.jpg" style="width:100%" alt="image-galleri">
-                  <img src="./images/slide-images/35.jpg" style="width:100%" alt="image-galleri">
-                  <img src="./images/slide-images/43.jpg" style="width:100%" alt="image-galleri">
-                </div>  
-                <div class="column">
-                  <img src="./images/slide-images/40.jpg" style="width:100%" alt="image-galleri">
-                  <img src="./images/slide-images/30.jpg" style="width:100%" alt="image-galleri">
-                  <img src="./images/slide-images/17.jpg" style="width:100%" alt="image-galleri">
-                </div>
-                <div class="column">
-                  <img src="./images/slide-images/26.jpg" style="width:100%" alt="image-galleri">
-                  <img src="./images/slide-images/20.jpg" style="width:100%" alt="image-galleri">
-                  <img src="./images/slide-images/23.jpg" style="width:100%" alt="image-galleri">
-                  <img src="./images/slide-images/13.jpg" style="width:100%" alt="image-galleri">
+        <section>
+            <div class="ttls">
+                <h2 class="titles">Présentation</h2>
+                <div class="brdr"></div>
+            </div>
 
+            <div class="images-container">
+                <div class="left-div">
+                    <img class="illu" src="./images/bg6.png" style="width:80%">
                 </div>
+
+                <div class="right-div">
+                    <p>Nous sommes les premiers au Maroc a introduire le lavage écologique par l'utilisation de machine 100% Waterless fontionnant a l'Ozone, n'utilisant aucune goutte d'eau, ni de produits chimiques. Nous nous sommes aussi dotés de machines Laser de dernière génération, capables de produire n'importe quel motif ou image sur tout type de tissus (dénim, prêt a porter, maille ...etc), avec une finesse et une qualité inégalable.</p>
+                    <a href="/about.html" class="btn btn-profile">Profil de la société</a>
+                </div>
+                
+            </div>
+            <div class="images-container">
+                <div class="left-div">
+                    <img class="illu" src="./images/earth.svg" style="width:80%">
+                </div>
+
+                <div class="right-div">
+                    <p>Notre marché actuel couvre tout le territoire national, l'Europe et les Etas-Unis. La qualité de service que nous assurons nous distingue nettement de la concurence et a fait valoir la reconnaissance de nos clients à travers des notes d'excelence de leurs cabinets d'audit de qualité, de technicité et d'éthique sociale. Nous sommes fiers de compter parmi nos clients</p>
+                    <a href="/about.html" class="btn btn-profile">Profil de la société</a>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section>
+            <div class="ttls">
+                <h2 class="titles">Gallerie</h2>
+                <div class="brdr"></div>
+            </div>
+            
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide s1">
+                        <img style="border-radius: 5px;" src="./images/slide-images/20.jpg" />
+                        <div class="bb1">
+                            <div>
+                                <img style="
+                                     margin-left: -73px;
+                                    width: 120px;
+                                    height: 50px;
+                                    padding: 6px 10px;
+                                    background-color: white;
+                                    border-radius: 30px 0 30px 0; 
+                                     " width="10px" height="119px" src="./images/logo2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="s1-1">
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide s1">
+                        <img style="width: 640px;
+                height: 320px; border-radius: 5px;" src="./images/slide-images/11.jpg" />
+                <div class="bb1">
+                    <div>
+                        <img style=" margin-left: -75px;
+                        width: 120px;
+                        height: 50px;
+                        padding: 6px 10px;
+                        background-color: white;
+                        border-radius: 30px 0 30px 0; "  src="./images/logo2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="s1-1">
+                    </div>
+                </div>
+                <div class="swiper-slide s1">
+                    <img style="width: 640px;
+                height: 320px; border-radius: 5px;" src="./images/slide-images/13.jpg" />
+                <div class="bb1">
+                    <div>
+                        <img style=" 
+                            margin-left: -70px; 
+                            width: 120px;
+                            height: 50px;
+                            padding: 6px 10px;
+                            background-color: white;
+                            border-radius: 30px 0 30px 0;
+                            "  
+                        src="./images/logo2.png" alt="">
+                    </div>
+                </div>
+                <div class="s1-1">
+                </div>
+            </div>
+            <div class="swiper-slide s1">
+                <img style="width: 640px;
+                height: 320px; border-radius: 5px;" src="./images/slide-images/15.jpg" />
+                <div class="bb1">
+                    <div>
+                        <img style="
+                            margin-left: -70px;
+                            width: 120px;
+                            height: 50px;
+                            padding: 6px 10px;
+                            background-color: white;
+                            border-radius: 30px 0 30px 0; 
+                            "  
+                            src="./images/logo2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="s1-1">
+                    </div>
+                </div>
+                <div class="swiper-slide s1">
+                    <img style="width: 640px;
+                height: 320px; border-radius: 5px;" src="./images/slide-images/17.jpg" />
+                <div class="bb1">
+                    <div>
+                        <img style=" 
+                            margin-left: -70px;
+                            width: 120px;
+                            height: 50px;
+                            padding: 6px 10px;
+                            background-color: white;
+                            border-radius: 30px 0 30px 0; 
+                         "  
+                         src="./images/logo2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="s1-1">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-c1f91012643f5d17d" aria-disabled="false"></div>
+            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Prev slide" aria-controls="swiper-wrapper-c1f91012643f5d17d" aria-disabled="false"></div>
         </div>
-    </div>
-        <hr>
-
-        <h2 class="titles">NOS RÉFÉRENCES</h2>
-        <div class="references">
-            <p>Notre marché actuel couvre tout le territoire national, l'Europe et les Etas-Unis. La qualité de service que nous assurons nous distingue nettement de la concurence et a fait valoir la reconnaissance de nos clients à travers des notes d'excelence de leurs cabinets d'audit de qualité, de technicité et d'éthique sociale. Nous sommes fiers de compter parmi nos clients :</p>
-            <img src="./images/references.png" alt="references">
-        </div>
-
-        <hr />
+        </section>
+        
+        <section>
+            <div class="ttls">
+                <h2 class="titles">Nos Références</h2>
+                <div class="brdr"></div>
+            </div>
+            <div class="references">
+                <p>Notre marché actuel couvre tout le territoire national, l'Europe et les Etas-Unis. La qualité de service que nous assurons nous distingue nettement de la concurence et a fait valoir la reconnaissance de nos clients à travers des notes d'excelence de leurs cabinets d'audit de qualité, de technicité et d'éthique sociale. Nous sommes fiers de compter parmi nos clients.</p>
+                <img src="./images/references.png" alt="references">
+            </div>
+        </section>
+       
     <footer>
-        <div class="side1">
-            <img src="./images/logo2.png" alt="logo">
-            <div class="left footer-side">
-                <ul>
-                    <li class="first">LIENS</li>
-                    <li><a href="/index.html">Accueil</a></li>
-                    <li><a href="/about.html">À propos</a></li>
-                    <li><a href="/contact.html">Nous contacter</a></li>
-                    <li><a href="/certification.html">Certification</a></li>
-                </ul>
+        <div class="footer-container">
+            <div class="side1">
+                <div class="logo-div-footer">
+                    <img src="./images/logo2.png" alt="logo">
+                </div>
+                <div class="left footer-side">
+                    <ul>
+                        <li class="first">LIENS</li>
+                        <li><a href="/index.html">Accueil</a></li>
+                        <li><a href="/about.html">À propos</a></li>
+                        <li><a href="/contact.html">Nous contacter</a></li>
+                        <li><a href="/certification.html">Certification</a></li>
+                    </ul>
+                <div class="social">
+                    <ul class="social-links">
+                        <li><a href="/index.html"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="/about.html"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="/contact.html"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="/certification.html"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="side2">
+                <div class="right footer-side">
+                    <ul>
+                        <li class="first">INFO</li>
+                        <li>Phone : +212 539 351 505</li>
+                        <li>Phone : +212 539 351 503</li>
+                        <li>Phone : +212 539 351 483</li>
+                        <li>Email : contact@ecolo.ma</li>
+                        <li>address : Zone Industrielle Mghogha,<br> route de Tétouan, Lot 58, Allée n°2
+                            90000, Tanger, Maroc</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="side2">
-            <div class="right footer-side">
-                <ul>
-                    <li class="first">INFO</li>
-                    <li>Phone : +212 539 351 505</li>
-                    <li>Phone : +212 539 351 503</li>
-                    <li>Phone : +212 539 351 483</li>
-                    <li>Email : contact@ecolo.ma</li>
-                    <li>address : Zone Industrielle Mghogha,<br> route de Tétouan, Lot 58, Allée n°2
-                        90000, Tanger, Maroc</li>
-                </ul>
-            </div>
         </div>
         <div class="bottom">
                 <p> &copy;2021, All Rights Reserved,  Created By &hearts; ET-TANTI MUSTAPHA</p>
         </div>
-        <br />
-    </footer>
-        <script>
-            $('.js-scroll-trigger').click(function () {
-                $('.navbar-collapse').collapse('hide');
-            });
-
-            function animateValue(id, start, end, duration) {
-                if (start === end) return;
-                var range = end - start;
-                var current = start;
-                var increment = end > start? 1 : -1;
-                var stepTime = Math.abs(Math.floor(duration / range));
-                var obj = document.getElementById(id);
-                var timer = setInterval(function() {
-                    current += increment;
-                    obj.innerHTML = current;
-                    if (current == end) {
-                        clearInterval(timer);
-                    }
-                }, stepTime);
-            }
-
-           //document.onload(animateValue("value", 10000000, 50000000, 5000));
-        </script>
+        </footer>
+    <script src="./js/main.js"></script>
         
-        <script>
-            var slideIndex = 1;
-            showDivs(slideIndex);
-            
-            function plusDivs(n) {
-            showDivs(slideIndex += n);
-            }
-            
-            function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-            }
-            x[slideIndex-1].style.display = "block";  
-            }
-
-            //slide automatic
-            var myIndex = 0;
-            carousel();
-
-            function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}    
-            x[myIndex-1].style.display = "block";  
-            setTimeout(carousel, 3000); // Change image every 2 seconds
-            }
-
-
-
-            // read more button
-            function myFunction() {
-                var dots = document.getElementById("dots");
-                var moreText = document.getElementById("more");
-                var btnText = document.getElementById("myBtn");
-
-                if (dots.style.display === "none") {
-                    dots.style.display = "inline";
-                    btnText.innerHTML = "Voire plus"; 
-                    moreText.style.display = "none";
-                } else {
-                    dots.style.display = "none";
-                    btnText.innerHTML = "Voire mois"; 
-                    moreText.style.display = "inline";
-                }
-                }
-            </script>
     </body>
 </html>

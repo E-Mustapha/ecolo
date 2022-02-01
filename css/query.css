@@ -7,7 +7,7 @@
         width: 95%;
     }
 }
-@media screen and (max-width: 858px) {
+@media screen and (max-width: 907px) {
     .checkbtn {
         display: block;
     }
@@ -27,18 +27,55 @@
         margin: 50px;
         line-height: 30px;
     }
-    nav ul li a {
+    nav ul li a, a.active {
         font-size: 20px;
+        background-color: #274dae;
+        border-radius: 20px 0 20px 0;
+        color: white;
+        transition: .5s;
     }
-    a:hover, a.active {
+    a:hover {
         background: none;
-        color: rgba(1, 156, 27, 0.589);
+        color: #274dae;
     }
     #check:checked ~ ul {
         left: 0;
     }
+    .container .banner {
+        display: grid;
+    }
+    .side-div {
+        width: 100%;
+        top: auto; 
+        transform: inherit;
+        position: relative;
+        padding: 3rem;
+    }
+    .svg-div {
+        width: 100%;
+        right: auto;
+        position: relative;
+    }
+    .svg-woman {
+        width: 70%;
+    }
+    .container.contact .svg-woman {
+        width: 40%;
+    }
+    .after-machine {
+        top: 100px;
+        left: 20%;
+        width: 70%;
+    }
     .side-div h2{
         font-size: 3rem;
+    }
+
+    .right-div{
+        width: 100%;
+    }
+    .left-div{
+        width: 100%;
     }
     .container.about h3{
         font-size: 2.5rem;
@@ -73,6 +110,31 @@
     }
     
 }
+@media screen and (max-width: 860px){
+    .side1 {
+        display: grid;
+    }
+    .logo-div-footer {
+        margin: 0 auto 20px;
+    }
+    .side2 {
+        width: 100%;
+    }
+    .right {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .footer-side ul {
+        margin: 15px auto;
+        text-align: center;
+    }
+    .images-container {
+        display: grid;
+    }
+    .slider-container {
+        max-width: 100%;
+    }
+}
 @media screen and (max-width: 700px){
     .container{
         display: grid;
@@ -103,26 +165,24 @@
         margin-bottom: 3rem;
         text-align: center;
     }
-    .svg-div{
-        display: none;
-    }
+
     .images-container{
         display: grid;
+    }
+    .container.contact .svg-woman {
+        width: 40%;
     }
     .slider-container{
         max-width: 80%;
         margin: 2rem auto;
     }
-    .right-div{
-        width: 100%;
+    .references p{
+        padding: 30px;
     }
     .column {
       -ms-flex: 50%;
       flex: 50%;
       max-width: 50%;
-    }
-    .side1 img {
-        margin-left: 3rem;
     }
     .about .right-div {
         width: 90%;
@@ -145,6 +205,9 @@
         height: 300px;
         margin-top: 4rem;
       }
+      .contactez-nous {
+        font-size: 3rem !important;
+    }
 }
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -154,9 +217,7 @@
     }
   }
 @media screen and  (max-width: 500px){
-    .container{
-        padding: 3rem 0;
-    }
+
     @supports not (display: grid){
         .container.certification, .container.about {
             margin-top: 0rem;
@@ -168,6 +229,15 @@
     }
     .right-div {
         padding: 2rem 1.8rem;
+    }
+    .references {
+        padding: 0;
+    }
+    .references p {
+        margin: auto 20px;
+    }
+    .references img {
+        width: 100%;
     }
     .side1 {
         width: 90%;
@@ -208,7 +278,9 @@
     .side-div h4 {
         font-size: 1.1rem;
     }
-    
+    .contactez-nous {
+        font-size: 2.5rem !important;
+    }
     .column {
         -ms-flex: 100%;
         flex: 100%;
@@ -221,13 +293,13 @@
       label.logo img {
         max-width: 160px;
     }
-    .references {
-        padding: 0 1rem;
-    }
     .slider-container {
         max-width: 95%;
     }
     .side1 img {
         margin-left: 1rem;
+    }
+    .side-div h3 {
+        font-size: 3rem;
     }
 }
