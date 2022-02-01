@@ -264,6 +264,9 @@
     .container.certification .certif-div h2{
         font-size: 2.5rem;
     }
+    .after-machine {
+        top: 60px;
+    }
 }
 @media screen and (max-width: 480px){
     .side-div {
